@@ -1,91 +1,112 @@
-<mxfile host="app.diagrams.net" modified="2026-10-19T19:27:00.000Z" agent="Copilot" version="24.7.17" type="device">
+<mxfile host="app.diagrams.net" modified="2026-10-19T19:35:00.000Z" agent="Copilot" version="24.7.17" type="device">
   <diagram id="pyomo-architecture" name="Pyomo Architecture">
-    <mxGraphModel adaptiveColors="auto" dx="1260" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1260" pageHeight="1000" math="0" shadow="0">
+    <mxGraphModel adaptiveColors="auto" dx="1300" dy="980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="980" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="title" value="Pyomo Architecture" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="430" y="18" width="400" height="35" as="geometry"/>
+        <mxCell id="title" value="Pyomo Architecture" style="text;html=1;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="12" width="400" height="40" as="geometry"/>
         </mxCell>
-        <mxCell id="modeler" value="Modeler&lt;br&gt;&lt;small&gt;Python application&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="500" y="80" width="260" height="70" as="geometry"/>
+        <mxCell id="band1" value="1 · Entry points" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fontColor=#666666;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#f7f7f7;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="30" y="60" width="1240" height="105" as="geometry"/>
         </mxCell>
-        <mxCell id="environment" value="pyomo.environ&lt;br&gt;&lt;small&gt;pyomo/environ/__init__.py&lt;br&gt;_import_packages() · plugin load()&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="440" y="180" width="380" height="90" as="geometry"/>
+        <mxCell id="band2" value="2 · Public API and command line" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fontColor=#666666;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#f7f7f7;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="30" y="180" width="1240" height="115" as="geometry"/>
         </mxCell>
-        <mxCell id="cli" value="Pyomo CLI&lt;br&gt;&lt;small&gt;pyomo.scripting.pyomo_main&lt;br&gt;main_console_script()&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="920" y="80" width="250" height="80" as="geometry"/>
+        <mxCell id="band3" value="3 · Modeling core and supporting packages" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fontColor=#666666;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#f7f7f7;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="30" y="310" width="1240" height="205" as="geometry"/>
         </mxCell>
-        <mxCell id="common" value="pyomo.common&lt;br&gt;&lt;small&gt;common.collections · ComponentMap&lt;br&gt;framework-independent utilities&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="35" y="350" width="260" height="95" as="geometry"/>
+        <mxCell id="band4" value="4 · Translation, solver API and extensions" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fontColor=#666666;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#f7f7f7;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="30" y="530" width="1240" height="140" as="geometry"/>
         </mxCell>
-        <mxCell id="dataportal" value="pyomo.dataportal&lt;br&gt;&lt;small&gt;dataportal.DataPortal&lt;br&gt;DataPortal.load()&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="965" y="350" width="260" height="95" as="geometry"/>
+        <mxCell id="band5" value="5 · Solver adapters" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fontColor=#666666;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#f7f7f7;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="30" y="685" width="1240" height="120" as="geometry"/>
         </mxCell>
-        <mxCell id="core" value="pyomo.core&lt;br&gt;&lt;small&gt;core.base.PyomoModel: ConcreteModel · AbstractModel&lt;br&gt;core.base.var.Var · constraint.Constraint&lt;br&gt;objective.Objective · set.Set · param.Param&lt;br&gt;core.util.quicksum() · expr.numvalue.value()&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="435" y="330" width="390" height="155" as="geometry"/>
+        <mxCell id="band6" value="6 · External solvers" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fontColor=#666666;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#f7f7f7;strokeColor=#dddddd;" vertex="1" parent="1">
+          <mxGeometry x="30" y="820" width="1240" height="110" as="geometry"/>
         </mxCell>
-        <mxCell id="repn" value="pyomo.repn&lt;br&gt;&lt;small&gt;standard_repn.generate_standard_repn()&lt;br&gt;plugins.lp_writer.LPWriter.write()&lt;br&gt;LP · MPS · NL writers&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="355" y="560" width="260" height="110" as="geometry"/>
+        <mxCell id="modeler" value="&lt;b&gt;Modeler script&lt;/b&gt;&lt;br&gt;&lt;small&gt;from pyomo.environ import *&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="520" y="90" width="280" height="65" as="geometry"/>
         </mxCell>
-        <mxCell id="opt" value="pyomo.opt&lt;br&gt;&lt;small&gt;opt.base.solvers.SolverFactory&lt;br&gt;OptSolver.solve() · SolverResults&lt;br&gt;SolverManagerFactory&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="645" y="560" width="280" height="110" as="geometry"/>
+        <mxCell id="cli" value="&lt;b&gt;pyomo CLI&lt;/b&gt;&lt;br&gt;&lt;small&gt;pyomo solve · pyomo help · pyomo convert&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="980" y="90" width="260" height="65" as="geometry"/>
         </mxCell>
-        <mxCell id="solvers" value="pyomo.solvers&lt;br&gt;&lt;small&gt;plugins.solvers.GLPK&lt;br&gt;SolverFactory.register('glpk')&lt;br&gt;adapters · converters&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="480" y="735" width="300" height="110" as="geometry"/>
+        <mxCell id="environment" value="&lt;b&gt;pyomo.environ&lt;/b&gt;&lt;br&gt;&lt;small&gt;pyomo/environ/__init__.py&lt;br&gt;_import_packages() loads every *.plugins module and calls load()&lt;br&gt;re-exports ConcreteModel, Var, SolverFactory, TransformationFactory ...&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="380" y="205" width="560" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="external" value="External optimization solvers&lt;br&gt;&lt;small&gt;GLPK · HiGHS · CBC · Ipopt · Gurobi&lt;br&gt;LP · MILP · NLP · MINLP&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="480" y="885" width="300" height="90" as="geometry"/>
+        <mxCell id="scripting" value="&lt;b&gt;pyomo.scripting&lt;/b&gt;&lt;br&gt;&lt;small&gt;pyomo_main.main_console_script()&lt;br&gt;driver_help · entry points in pyproject.toml&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="980" y="205" width="260" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="specialized" value="Specialized modeling packages&lt;br&gt;&lt;small&gt;pyomo.gdp · pyomo.dae · pyomo.mpec&lt;br&gt;pyomo.network · TransformationFactory()&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="35" y="560" width="280" height="105" as="geometry"/>
+        <mxCell id="common" value="&lt;b&gt;pyomo.common&lt;/b&gt;&lt;br&gt;&lt;small&gt;config · dependencies · deprecation&lt;br&gt;collections.ComponentMap · timing&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="60" y="335" width="280" height="70" as="geometry"/>
         </mxCell>
-        <mxCell id="contrib" value="pyomo.contrib&lt;br&gt;&lt;small&gt;contrib.appsi.base.SolverFactory&lt;br&gt;optional extensions · plugin integration&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="945" y="560" width="280" height="105" as="geometry"/>
+        <mxCell id="specialized" value="&lt;b&gt;Specialized modeling&lt;/b&gt;&lt;br&gt;&lt;small&gt;pyomo.gdp · pyomo.dae · pyomo.mpec · pyomo.network&lt;br&gt;register via TransformationFactory&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="60" y="425" width="280" height="70" as="geometry"/>
         </mxCell>
-        <mxCell id="scripting" value="pyomo.scripting&lt;br&gt;&lt;small&gt;pyomo.scripting.pyomo_main&lt;br&gt;main_console_script()&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="920" y="185" width="250" height="85" as="geometry"/>
+        <mxCell id="core" value="&lt;b&gt;pyomo.core&lt;/b&gt;&lt;br&gt;&lt;small&gt;core.base.PyomoModel: ConcreteModel · AbstractModel · Block&lt;br&gt;components: Var · Param · Set · Constraint · Objective · Suffix&lt;br&gt;core.expr: expression trees · value() · differentiate()&lt;br&gt;core.util: quicksum() · sum_product()&lt;br&gt;core.base.transformation: TransformationFactory · core.kernel API&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="380" y="335" width="560" height="160" as="geometry"/>
         </mxCell>
-        <mxCell id="legend" value="Solid arrows: model / solve flow · Dashed arrows: shared utilities / plugin integration. Labels identify key modules and APIs." style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#555555;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="180" y="975" width="900" height="20" as="geometry"/>
+        <mxCell id="dataportal" value="&lt;b&gt;pyomo.dataportal&lt;/b&gt;&lt;br&gt;&lt;small&gt;DataPortal.load() from .dat, CSV,&lt;br&gt;Excel, JSON/YAML, databases&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="980" y="335" width="260" height="70" as="geometry"/>
         </mxCell>
-        <mxCell id="e1" value="API" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6c8ebf;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="modeler" target="environment">
+        <mxCell id="repn" value="&lt;b&gt;pyomo.repn&lt;/b&gt;&lt;br&gt;&lt;small&gt;standard_repn.generate_standard_repn()&lt;br&gt;plugins: LPWriter · NLWriter · ProblemWriter_mps&lt;br&gt;ProblemWriter_gams · ProblemWriter_bar&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="380" y="555" width="250" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="opt" value="&lt;b&gt;pyomo.opt&lt;/b&gt;&lt;br&gt;&lt;small&gt;base.solvers: SolverFactory · OptSolver.solve()&lt;br&gt;base: WriterFactory · ReaderFactory&lt;br&gt;results: SolverResults · TerminationCondition&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="690" y="555" width="250" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="contrib" value="&lt;b&gt;pyomo.contrib&lt;/b&gt;&lt;br&gt;&lt;small&gt;appsi · solver · gdpopt · mindtpy&lt;br&gt;pynumero · fbbt · preprocessing ...&lt;br&gt;listed in pyomo/environ/__init__.py&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="980" y="555" width="260" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="solvers" value="&lt;b&gt;pyomo.solvers&lt;/b&gt;&lt;br&gt;&lt;small&gt;plugins.solvers: GLPK · CBCplugin · IPOPT · GUROBI · CPLEX · gurobi_direct · cplex_persistent · ASL&lt;br&gt;each registered with @SolverFactory.register(name) · plugins.converter: model · ampl · glpsol&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="380" y="710" width="560" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="external" value="&lt;b&gt;External optimization solvers&lt;/b&gt;&lt;br&gt;&lt;small&gt;GLPK · CBC · HiGHS · Ipopt · Gurobi · CPLEX · BARON · SCIP  —  LP · MILP · NLP · MINLP&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="380" y="845" width="560" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend" value="Solid arrows: model build and solve flow · Dashed arrows: shared utilities or plugin registration · Each box lists the module path and its key classes / functions" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#555555;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="940" width="1100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="imports" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6c8ebf;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="modeler" target="environment">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e2" value="build model" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6c8ebf;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="environment" target="core">
+        <mxCell id="e2" value="runs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#d6b656;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="cli" target="scripting">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e3" value="loads" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#82b366;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="dataportal" target="core">
+        <mxCell id="e3" value="uses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#d6b656;strokeWidth=2;endArrow=block;endFill=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="scripting" target="environment">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e4" value="shared services" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#82b366;strokeWidth=2;dashed=1;endArrow=block;endFill=1;" edge="1" parent="1" source="common" target="core">
+        <mxCell id="e4" value="build model" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6c8ebf;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="environment" target="core">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e5" value="representation" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6c8ebf;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="core" target="repn">
+        <mxCell id="e5" value="utilities" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#82b366;strokeWidth=2;dashed=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.219;" edge="1" parent="1" source="common" target="core">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e6" value="solver API" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6c8ebf;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="core" target="opt">
+        <mxCell id="e6" value="transformations" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#9673a6;strokeWidth=2;dashed=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.781;" edge="1" parent="1" source="specialized" target="core">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e7" value="write / convert" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6c8ebf;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="repn" target="solvers">
+        <mxCell id="e7" value="load data" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#82b366;strokeWidth=2;endArrow=block;endFill=1;exitX=0;exitY=0.5;entryX=1;entryY=0.219;" edge="1" parent="1" source="dataportal" target="core">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e8" value="dispatch / results" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6c8ebf;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="opt" target="solvers">
+        <mxCell id="e8" value="write model" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6c8ebf;strokeWidth=2;endArrow=block;endFill=1;exitX=0.223;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="core" target="repn">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e9" value="solve" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#d79b00;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="solvers" target="external">
+        <mxCell id="e9" value="solve(model)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6c8ebf;strokeWidth=2;endArrow=block;endFill=1;exitX=0.777;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="core" target="opt">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e10" value="CLI" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#d6b656;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="cli" target="scripting">
+        <mxCell id="e10" value="writers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6c8ebf;strokeWidth=2;dashed=1;endArrow=block;endFill=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="opt" target="repn">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e11" value="command execution" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#d6b656;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="scripting" target="opt">
+        <mxCell id="e11" value="registers solvers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#9673a6;strokeWidth=2;dashed=1;endArrow=block;endFill=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="contrib" target="opt">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e12" value="extends core" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9673a6;strokeWidth=2;dashed=1;endArrow=block;endFill=1;" edge="1" parent="1" source="specialized" target="core">
+        <mxCell id="e12" value="LP / NL / MPS files" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6c8ebf;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.223;entryY=0;" edge="1" parent="1" source="repn" target="solvers">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e13" value="plugin packages" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9673a6;strokeWidth=2;dashed=1;endArrow=block;endFill=1;" edge="1" parent="1" source="contrib" target="environment">
+        <mxCell id="e13" value="dispatch / results" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6c8ebf;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.777;entryY=0;" edge="1" parent="1" source="opt" target="solvers">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e14" value="subprocess / direct API" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#d79b00;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="solvers" target="external">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
       </root>
